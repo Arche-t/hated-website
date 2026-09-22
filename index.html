@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0a0a0f" />
+<title>HATED — Creando cultura desde la resistencia</title>
+<meta name="description" content="HATED — Ropa rescatada e intervenida a mano. Piezas únicas, segunda mano customizada y nueva colección limitada." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+  <div id="entry-overlay" class="entry-overlay">
+    <div class="entry-content">
+      <div class="entry-logo">
+        <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 4v16M4 12h10M14 4v16M20 4l-6 8 6 8"/>
+        </svg>
+        <span class="entry-text">HATED</span>
+        <span class="entry-sub">Creando cultura desde la resistencia.</span>
+      </div>
+      <button id="btnEnter" class="btn btn--solid">Добро пожаловать!</button>
+    </div>
+  </div>
+
+  <div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-mark">HATED</div>
+    <div class="loader-tagline">Creando cultura desde la resistencia.</div>
+    <div class="loader-line"></div>
+  </div>
+</div>
+
+<div class="header-sticky-wrapper" id="headerWrapper">
+
+  <div class="ticker" aria-label="Anuncios">
+    <div class="ticker-track">
+      <span>PRÓXIMO DROP EN OCTUBRE</span><span>·</span>
+      <span>1312</span><span>·</span>
+      <span>ENVÍOS A TODA COLOMBIA</span><span>·</span>
+      <span>ACAB</span><span>·</span>
+      <span>PIEZAS ÚNICAS INTERVENIDAS A MANO</span><span>·</span>
+      <span>@HATED.PNG</span><span>·</span>
+      <span>PRÓXIMO DROP EN OCTUBRE</span><span>·</span>
+      <span>1312</span><span>·</span>
+      <span>ENVÍOS A TODA COLOMBIA</span><span>·</span>
+      <span>ACAB</span><span>·</span>
+      <span>PIEZAS ÚNICAS INTERVENIDAS A MANO</span><span>·</span>
+      <span>@HATED.PNG</span><span>·</span>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+
+      <div class="header-left">
+        <button class="burger" id="burger" type="button"
+                aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <a href="#top" class="logo" aria-label="HATED — inicio">
+        <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 4v16M4 12h10M14 4v16M20 4l-6 8 6 8"/>
+        </svg>
+        <span class="logo-text">HATED</span>
+        <span class="logo-sub">Creando cultura desde la resistencia.</span>
+      </a>
+
+      <div class="header-right">
+        <nav class="nav-inline" aria-label="Navegación principal">
+          <a href="#top">Inicio</a>
+          <div class="nav-inline-item">
+            <button class="nav-inline-trigger" type="button">
+              Shop
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+              </svg>
+            </button>
+            <div class="nav-inline-menu">
+              <a href="#cat-camisetas">Camisetas y camisas</a>
+              <a href="#cat-buzos">Buzos, chaquetas y blazers</a>
+              <a href="#cat-pantalones">Pantalones y jeans</a>
+              <a href="#cat-gorras">Gorras</a>
+              <a href="#cat-corbatas">Corbatas</a>
+              <a href="#cat-conjuntos">Conjuntos</a>
+              <a href="#cat-parches">Parches</a>
+            </div>
+          </div>
+          <a href="#coleccion">Drops</a>
+          <a href="#videos">Proceso</a>
+          <a href="#instagram">Contacto</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" type="button" aria-label="Buscar" id="btn-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M21 21l-4.3-4.3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </button>
+          <a href="wishlist.html" class="icon-btn" aria-label="Lista de deseos">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"
+                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+            <span class="badge" id="wishlistCount" hidden>0</span>
+          </a>
+          <button class="icon-btn icon-btn--cart" type="button" aria-label="Abrir carrito" id="btn-cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 3h2l2.4 12.3a2 2 0 0 0 2 1.7h9.7a2 2 0 0 0 2-1.6L23 6H6"
+                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+              <circle cx="9" cy="21" r="1.4" fill="currentColor"/>
+              <circle cx="19" cy="21" r="1.4" fill="currentColor"/>
+            </svg>
+            <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil" aria-hidden="true">
+  <div class="mobile-menu-head">
+    <span class="mobile-menu-brand">HATED</span>
+    <button class="mobile-menu-close" id="mobileMenuClose" type="button" aria-label="Cerrar menú">✕</button>
+  </div>
+  <div class="mobile-menu-body">
+    <a href="#top">Inicio</a>
+    <div class="mobile-menu-group">
+      <button class="mobile-menu-toggle" type="button">Shop <span>+</span></button>
+      <div class="mobile-menu-submenu">
+        <a href="#cat-camisetas">Camisetas y camisas</a>
+        <a href="#cat-buzos">Buzos, chaquetas y blazers</a>
+        <a href="#cat-pantalones">Pantalones y jeans</a>
+        <a href="#cat-gorras">Gorras</a>
+        <a href="#cat-corbatas">Corbatas</a>
+        <a href="#cat-conjuntos">Conjuntos</a>
+        <a href="#cat-parches">Parches</a>
+      </div>
+    </div>
+    <a href="#coleccion">Drops</a>
+    <a href="#videos">Proceso</a>
+    <a href="#instagram">Contacto</a>
+    <a href="wishlist.html">Lista de deseos</a>
+  </div>
+  <div class="mobile-menu-foot">
+    <a href="https://www.instagram.com/hated.png/" rel="noopener" target="_blank">@hated.png</a>
+    <span>·</span>
+    <a href="mailto:hola@hated.co">hola@hated.co</a>
+  </div>
+</nav>
+
+<aside class="mini-cart" id="miniCart" aria-label="Carrito" aria-hidden="true">
+  <div class="mini-cart-head">
+    <h3>Tu carrito</h3>
+    <button class="mini-cart-close" id="miniCartClose" type="button" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="mini-cart-body" id="miniCartBody">
+    <div class="mini-cart-empty" id="miniCartEmpty">
+      <svg class="mini-cart-ghost" viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="square">
+          <path d="M6 10h8l4.8 26a4 4 0 0 0 4 3.4h22.4a4 4 0 0 0 4-3.2L54 18H16"/>
+          <circle cx="25" cy="50" r="3.2"/>
+          <circle cx="47" cy="50" r="3.2"/>
+        </g>
+      </svg>
+      <p class="mini-cart-empty-title">Tu carrito está vacío.</p>
+      <p class="mini-cart-empty-text">Las piezas únicas vuelan rápido.</p>
+      <a href="#coleccion" class="btn btn--solid btn--small">Ver drop activo</a>
+    </div>
+    <ul class="mini-cart-items" id="miniCartItems"></ul>
+  </div>
+  <div class="mini-cart-foot" id="miniCartFoot" hidden>
+    <div class="mini-cart-total">
+      <span>Total</span>
+      <span id="miniCartTotal">$0</span>
+    </div>
+    <a href="cart.html" class="btn btn--solid btn--full">Ver carrito completo</a>
+    <button class="mini-cart-continue" id="miniCartContinue" type="button">Seguir comprando</button>
+  </div>
+</aside>
+
+<div class="search-overlay" id="searchOverlay" hidden>
+  <div class="search-overlay-inner">
+    <button class="search-close" id="searchClose" type="button" aria-label="Cerrar búsqueda">✕</button>
+    <label class="search-label" for="searchInput">Buscar piezas</label>
+    <input type="search" id="searchInput" class="search-input" placeholder="camisa, jean, gorra..." autocomplete="off" />
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- MODAL DE PRODUCTO (corazón SOLO aquí) -->
+<div class="product-modal" id="productModal" hidden aria-modal="true" role="dialog" aria-label="Detalle de producto">
+  <div class="product-modal-scrim" id="modalScrim"></div>
+  <div class="product-modal-content">
+    <button class="product-modal-close" id="modalClose" type="button" aria-label="Cerrar">✕</button>
+    <div class="product-modal-grid">
+      <div class="product-modal-img" id="modalImgWrap">
+        <img class="product-modal-photo" id="modalImg" alt="" hidden>
+        <svg class="art" id="modalSvg" viewBox="0 0 64 64" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">
+            <path d="M6 10h8l4.8 26a4 4 0 0 0 4 3.4h22.4a4 4 0 0 0 4-3.2L54 18H16"/>
+            <circle cx="25" cy="50" r="3.2"/>
+            <circle cx="47" cy="50" r="3.2"/>
+            <path d="M22 22h28M24 30h24"/>
+          </g>
+        </svg>
+      </div>
+      <div class="product-modal-info">
+        <div class="product-modal-condition" id="modalCondition"></div>
+        <h2 class="product-modal-name" id="modalName"></h2>
+        <div class="product-modal-price" id="modalPrice"></div>
+        <div class="product-modal-details">
+          <div class="product-modal-detail">
+            <span class="detail-label">Tallas</span>
+            <span class="detail-value" id="modalSizes"></span>
+          </div>
+          <div class="product-modal-detail">
+            <span class="detail-label">Medidas</span>
+            <span class="detail-value" id="modalMeasurements"></span>
+          </div>
+          <div class="product-modal-detail">
+            <span class="detail-label">Estado</span>
+            <span class="detail-value" id="modalState"></span>
+          </div>
+          <div class="product-modal-detail">
+            <span class="detail-label">Marca</span>
+            <span class="detail-value" id="modalBrand"></span>
+          </div>
+          <div class="product-modal-detail">
+            <span class="detail-label">Detalles</span>
+            <span class="detail-value" id="modalDetails"></span>
+          </div>
+        </div>
+        <div class="product-modal-actions">
+          <button class="add product-modal-add" id="modalAdd" type="button">Añadir al carrito</button>
+          <button class="wishlist-btn" id="modalWishlist" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/>
+            </svg>
+            <span id="wishlistBtnText">Añadir a favoritos</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <symbol id="glyph-cart" viewBox="0 0 64 64">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" vector-effect="non-scaling-stroke">
+        <path d="M6 10h8l4.8 26a4 4 0 0 0 4 3.4h22.4a4 4 0 0 0 4-3.2L54 18H16"/>
+        <circle cx="25" cy="50" r="3.2"/>
+        <circle cx="47" cy="50" r="3.2"/>
+        <path d="M22 22h28M24 30h24"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<main>
+
+  <section class="section drop" id="coleccion">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="drop-meta">Próximo drop en Octubre</div>
+        <h1>Nueva colección</h1>
+        <p class="sec-text" style="margin-top:18px">Lo último que salió del taller: piezas rescatadas y piezas nuevas, cada una en unidad limitada.</p>
+      </div>
+      <div class="grid reveal" style="margin-top:40px">
+
+        <article class="card" data-name="TBA" data-price="0" data-note="Talla x" data-condition="Pendiente" data-sizes="N/A" data-measurements="N/A" data-state="Pendiente" data-brand="HATED" data-desc="Pieza en proceso de customización.">
+          <div class="card-img">
+            <span class="tag">Próximamente</span>
+            <span class="tag tag--stock">Pendiente</span>
+            <svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg>
+          </div>
+          <div class="card-body">
+            <h3>Pieza 01</h3>
+            <div class="price">$0.000</div>
+            <div class="card-note">Talla x</div>
+            <button class="add" type="button">Añadir</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="TBA" data-price="0" data-note="Talla x" data-condition="Pendiente" data-sizes="N/A" data-measurements="N/A" data-state="Pendiente" data-brand="HATED" data-desc="Pieza en proceso de customización.">
+          <div class="card-img">
+            <span class="tag">Próximamente</span>
+            <span class="tag tag--stock">Pendiente</span>
+            <svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg>
+          </div>
+          <div class="card-body">
+            <h3>Pieza 02</h3>
+            <div class="price">$0.000</div>
+            <div class="card-note">Talla x</div>
+            <button class="add" type="button">Añadir</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="TBA" data-price="0" data-note="Talla x" data-condition="Pendiente" data-sizes="N/A" data-measurements="N/A" data-state="Pendiente" data-brand="HATED" data-desc="Pieza en proceso de customización.">
+          <div class="card-img">
+            <span class="tag">Próximamente</span>
+            <span class="tag tag--stock">Pendiente</span>
+            <svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg>
+          </div>
+          <div class="card-body">
+            <h3>Pieza 03</h3>
+            <div class="price">$0.000</div>
+            <div class="card-note">Talla x</div>
+            <button class="add" type="button">Añadir</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="TBA" data-price="0" data-note="Talla x" data-condition="Pendiente" data-sizes="N/A" data-measurements="N/A" data-state="Pendiente" data-brand="HATED" data-desc="Pieza en proceso de customización.">
+          <div class="card-img">
+            <span class="tag">Próximamente</span>
+            <span class="tag tag--stock">Pendiente</span>
+            <svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg>
+          </div>
+          <div class="card-body">
+            <h3>Pieza 04</h3>
+            <div class="price">$0.000</div>
+            <div class="card-note">Talla x</div>
+            <button class="add" type="button">Añadir</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="TBA" data-price="0" data-note="Talla x" data-condition="Pendiente" data-sizes="N/A" data-measurements="N/A" data-state="Pendiente" data-brand="HATED" data-desc="Pieza en proceso de customización.">
+          <div class="card-img">
+            <span class="tag">Próximamente</span>
+            <span class="tag tag--stock">Pendiente</span>
+            <svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg>
+          </div>
+          <div class="card-body">
+            <h3>Pieza 05</h3>
+            <div class="price">$0.000</div>
+            <div class="card-note">Talla x</div>
+            <button class="add" type="button">Añadir</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="TBA" data-price="0" data-note="Talla x" data-condition="Pendiente" data-sizes="N/A" data-measurements="N/A" data-state="Pendiente" data-brand="HATED" data-desc="Pieza en proceso de customización.">
+          <div class="card-img">
+            <span class="tag">Próximamente</span>
+            <span class="tag tag--stock">Pendiente</span>
+            <svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg>
+          </div>
+          <div class="card-body">
+            <h3>Pieza 06</h3>
+            <div class="price">$0.000</div>
+            <div class="card-note">Talla x</div>
+            <button class="add" type="button">Añadir</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section videos" id="videos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-sub">Detrás de cámaras</div>
+        <h2>Videos</h2>
+        <p class="sec-text">Miradas rápidas al taller y al proceso detrás de cada pieza.</p>
+      </div>
+      <div class="video-grid reveal">
+        <article class="video-card" id="mainVideoCard" data-video="assets/process/process1.mp4" data-name="Proceso Ritual" data-desc="Intervención manual de piezas rescatadas.">
+          <div class="video-frame">
+            <video id="previewVideo" muted loop playsinline src="assets/process/process1.mp4"></video>
+            <div class="play-overlay">
+              <svg class="video-play" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="scroll-indicator">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+              </svg>
+              <span>Scroll</span>
+            </div>
+          </div>
+          <div class="video-label">Ver proceso</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIKTOK FEED OVERLAY -->
+  <div id="videoFeed" class="video-feed-overlay">
+    <button id="closeFeed" class="video-feed-close">✕</button>
+    <div id="feedTrack"></div>
+  </div>
+
+  <section class="section collection" id="cat-camisetas">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-sub">01</div>
+        <h2>Camisetas y camisas</h2>
+        <p class="sec-text">Gráficas propias, bordados a mano y piezas rescatadas intervenidas. Edición limitada.</p>
+      </div>
+      <div class="cat-grid reveal">
+        <article class="card" data-name="TBA" data-price="0" data-note="Talla x" data-condition="Pendiente" data-sizes="N/A" data-measurements="N/A" data-state="Pendiente" data-brand="HATED" data-desc="Pieza en proceso de customización.">
+          <div class="card-img"><span class="tag">Próximamente</span><span class="tag tag--stock">Pendiente</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Pieza 01</h3><div class="price">$0.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+        <article class="card" data-name="TBA" data-price="0" data-note="Talla x" data-condition="Pendiente" data-sizes="N/A" data-measurements="N/A" data-state="Pendiente" data-brand="HATED" data-desc="Pieza en proceso de customización.">
+          <div class="card-img"><span class="tag">Próximamente</span><span class="tag tag--stock">Pendiente</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Pieza 02</h3><div class="price">$0.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+        <article class="card" data-name="TBA" data-price="0" data-note="Talla x" data-condition="Pendiente" data-sizes="N/A" data-measurements="N/A" data-state="Pendiente" data-brand="HATED" data-desc="Pieza en proceso de customización.">
+          <div class="card-img"><span class="tag">Próximamente</span><span class="tag tag--stock">Pendiente</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Pieza 03</h3><div class="price">$0.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collection" id="cat-buzos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-sub">02</div>
+        <h2>Buzos, chaquetas y blazers</h2>
+        <p class="sec-text">Piezas de capa externa intervenidas: hoodies, chaquetas rescatadas y blazers reconstruidos con detalles únicos.</p>
+      </div>
+      <div class="cat-grid reveal">
+        <article class="card" data-name="Sudadera Adidas Pink" data-price="55.000" data-note="Talla x" data-condition="Prenda nueva customizada" data-sizes="S · M · L · XL" data-measurements="Pecho: 56-64cm · Largo: 70-76cm · Manga: 60-66cm" data-state="Nueva" data-brand="HATED" data-desc="Hoodie rosa con detalles personalizados. Algodón pesado 380g. Corte regular unisex." data-images="assets/products/cbb/adidaspink1.jpg,assets/products/cbb/adidaspink2.jpg">
+          <div class="card-img"><span class="tag">Prenda de Segunda Mano Customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Sudadera Adidas Pink</h3><div class="price">$55.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+        <article class="card" data-name="Chaqueta Vascular 002" data-price="70.000" data-note="Talla x" data-condition="Prenda de segunda mano customizada" data-sizes="M" data-measurements="Pecho: 54cm · Largo: 68cm · Manga: 62cm" data-state="Usada · Excelente estado" data-brand="HATED" data-desc="Chaqueta de mezclilla rescatada con bordado vascular en la espalda. Hilo rojo y negro." data-images="assets/products/cbb/ojostristes1.jpg,assets/products/cbb/ojostristes2.jpg,assets/products/cbb/ojostristes3.jpg">
+          <div class="card-img"><span class="tag">Prenda de Segunda Mano Customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Buzo de Ojos Tristes</h3><div class="price">$70.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+        <article class="card" data-name="Blazer Nana" data-price="70.000" data-note="Talla x" data-condition="Prenda de segunda mano customizada" data-sizes="L" data-measurements="Pecho: 58cm · Largo: 74cm · Manga: 64cm" data-state="Usada · Buen estado" data-brand="HATED" data-desc="Blazer de lana rescatado y reconstruido con parches cosidos a mano. Forro nuevo." data-images="assets/products/cbb/blazernana1.jpg,assets/products/cbb/blazernana2.jpg,assets/products/cbb/blazernana3.jpg">
+          <div class="card-img"><span class="tag">Prenda de Segunda Mano Customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Blazer Nana</h3><div class="price">$70.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collection" id="cat-pantalones">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-sub">03</div>
+        <h2>Pantalones y jeans</h2>
+        <p class="sec-text">Denim rescatado, cortes reconstruidos y herrajes añadidos. Cada pieza es única.</p>
+      </div>
+      <div class="cat-grid reveal">
+        <article class="card" data-name="Jean Flare" data-price="60000" data-note="Talla x" data-condition="Prenda de segunda mano customizada" data-sizes="30" data-measurements="Cintura: 40cm · Largo: 108cm" data-state="Usada · Excelente estado" data-brand="HATED" data-desc="Jean rescatado con corte flare acampanado. Intervención minimalista en bastilla." data-images="assets/products/jeans/jeanflare1.jpg,assets/products/jeans/jeanflare2.jpg,assets/products/jeans/jeanflare3.jpg">
+          <div class="card-img"><span class="tag">Prenda de Segunda Mano Customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Jean Flare</h3><div class="price">$60.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+        <article class="card" data-name="Jean Kuromi" data-price="30000" data-note="Talla x" data-condition="Prenda de segunda mano customizada" data-sizes="32" data-measurements="Cintura: 42cm · Largo: 104cm" data-state="Usada · Buen estado" data-brand="HATED" data-desc="Jean customizado con estética Kuromi. Detalles en encaje negro y costuras expuestas." data-images="assets/products/jeans/kuromijeans1.jpg,assets/products/jeans/kuromijeans2.jpg,assets/products/jeans/kuromijeans3.jpg">
+          <div class="card-img"><span class="tag">Prenda de Segunda Mano Customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Jean Kuromi</h3><div class="price">$30.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+        <article class="card" data-name="Jean Doble" data-price="60000" data-note="Talla x" data-condition="Prenda de segunda mano customizada" data-sizes="31" data-measurements="Cintura: 41cm · Largo: 105cm" data-state="Usada · Excelente estado" data-brand="HATED" data-desc="Jean experimental con efecto de doble capa. Mezcla de tonos índigo y negro." data-images="assets/products/jeans/doblejeans.jpg">
+          <div class="card-img"><span class="tag">Prenda de Segunda Mano Customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Jean Doble</h3><div class="price">$60.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collection" id="cat-faldas">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-sub">04</div>
+        <h2>Faldas y Jorts</h2>
+        <p class="sec-text">Piezas rescatadas con cortes experimentales y detalles góticos. Estética disruptiva y piezas únicas.</p>
+      </div>
+      <div class="cat-grid reveal">
+        <article class="card" data-name="FALDA DIABÓLICA" data-price="45000" data-note="Talla x" data-condition="Prenda de segunda mano customizada" data-sizes="L" data-measurements="Cintura: 40cm · Largo: 48cm" data-state="Usada · Excelente estado" data-brand="HATED" data-desc="Falda denim oscura con aplicaciones de parches y bordados rituales." data-images="assets/products/faldas/faldadiabolica1.jpg,assets/products/faldas/faldadiabolica2.jpg,assets/products/faldas/faldadiabolica3.jpg">
+          <div class="card-img"><span class="tag">Prenda de Segunda Mano Customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>FALDA DIABÓLICA</h3><div class="price">$45.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+        <article class="card" data-name="FALDA DE JEAN" data-price="45000" data-note="Talla x" data-condition="Prenda de segunda mano customizada" data-sizes="M" data-measurements="Cintura: 38cm · Largo: 45cm" data-state="Usada · Excelente estado" data-brand="HATED" data-desc="Falda corta con intervenciones en encaje negro y herrajes metálicos." data-images="assets/products/faldas/faldadejean1.jpg,assets/products/faldas/faldadejean2.jpg,assets/products/faldas/faldadejean3.jpg">
+          <div class="card-img"><span class="tag">Prenda de Segunda Mano Customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>FALDA DE JEAN</h3><div class="price">$45.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+        <article class="card" data-name="Angel Jorts" data-price="35000" data-note="Talla x" data-condition="Prenda de segunda mano customizada" data-sizes="S" data-measurements="Cintura: 36cm · Largo: 42cm" data-state="Usada · Buen estado" data-brand="HATED" data-desc="Falda con cortes asimétricos y costuras expuestas en hilo rojo." data-images="assets/products/jorts/angeljorts1.jpg,assets/products/jorts/angeljorts2.jpg">
+          <div class="card-img"><span class="tag">Prenda de Segunda Mano Customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Angel Jorts</h3><div class="price">$35.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collection" id="cat-gorras">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-sub">05</div>
+        <h2>Gorras</h2>
+        <p class="sec-text">Bordadas a mano, con gráfica propia. Ajustables y en unidades limitadas.</p>
+      </div>
+      <div class="cat-grid reveal" style="display: flex; justify-content: center;">
+        <article class="card" data-name="Gorra Sigilo" data-price="15.000" data-note="Talla x" data-condition="Prenda nueva customizada" data-sizes="Única ajustable" data-measurements="Circunferencia: 54-60cm" data-state="Nueva" data-brand="HATED" data-desc="Gorra negra con bordados sigilo en tonos oscuros. Ajustable con hebilla metálica." data-images="assets/products/gorras/gorrosigilos1.jpg,assets/products/gorras/gorrosigilos2.jpg">
+          <div class="card-img"><span class="tag">Prenda de Segunda Mano Customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Gorra Sigilo</h3><div class="price">$15.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collection" id="cat-corbatas">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-sub">06</div>
+        <h2>Corbatas</h2>
+        <p class="sec-text">Prendas rescatadas e intervenidas a mano. Detalles únicos, unidades limitadas.</p>
+      </div>
+      <div class="cat-grid cat-grid--corbatas reveal">
+        <article class="card" data-name="Corbata ritual 001" data-price="15000" data-note="Talla x" data-condition="Prenda de segunda mano customizada" data-sizes="Única" data-measurements="N/A" data-state="Usada · Excelente estado" data-brand="HATED" data-desc="Corbata personalizada de color rojo">
+          <div class="card-img">
+            <img src="assets/products/corbatas/corbata1.jpg" alt="Corbata ritual 001">
+            <span class="tag">Prenda de segunda mano customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Corbata roja de taches</h3><div class="price">$15.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+        <article class="card" data-name="Corbata luto 004" data-price="15000" data-note="Talla x" data-condition="Prenda de segunda mano customizada" data-sizes="Única" data-measurements="N/A" data-state="Usada · Excelente estado" data-brand="HATED" data-desc="Corbata personalizada de color negro">
+          <div class="card-img">
+            <img src="assets/products/corbatas/corbata2.jpg" alt="Corbata luto 004">
+            <span class="tag">Prenda de segunda mano customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Corbata negra de cruz invertida</h3><div class="price">$15.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+        <article class="card" data-name="Corbata vascular 008" data-price="15000" data-note="Talla x" data-condition="Prenda de segunda mano customizada" data-sizes="Única" data-measurements="N/A" data-state="Usada · Excelente estado" data-brand="HATED" data-desc="Corbata personalizada de color rojo">
+          <div class="card-img">
+            <img src="assets/products/corbatas/corbata3.jpg" alt="Corbata vascular 008">
+            <span class="tag">Prenda de segunda mano customizada</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>Corbata cortada y cicatrizada</h3><div class="price">$15.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collection" id="cat-conjuntos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-sub">07</div>
+        <h2>Conjuntos</h2>
+        <p class="sec-text">Looks completos pensados como unidad. Prendas que dialogan entre sí.</p>
+      </div>
+      <div class="cat-grid cat-grid--few reveal">
+        <article class="card card--large" data-name="CONJUNTO DE CUADROS" data-price="60000" data-note="Talla x" data-condition="Conjunto customizado" data-sizes="M (chaqueta) · 32 (pantalón)" data-measurements="Chaqueta: Pecho 54cm, Largo 68cm · Pantalón: Cintura 42cm, Largo 104cm" data-state="Nuevo · Piezas intervenidas" data-brand="HATED" data-desc="Conjunto de chaqueta de mezclilla y pantalón jean, ambas piezas intervenidas con el motivo ritual. Bordados coordinados en hilo negro y morado." data-images="assets/products/conjunto/conjuntocuadros1.jpg,assets/products/conjunto/conjuntocuadros2.jpg,assets/products/conjunto/conjuntocuadros3.jpg">
+          <div class="card-img"><span class="tag">Conjunto customizado</span><span class="tag tag--stock">Disponible</span><svg class="art" viewBox="0 0 64 64" aria-hidden="true"><use href="#glyph-cart"/></svg></div>
+          <div class="card-body"><h3>CONJUNTO DE CUADROS</h3><div class="price">$60.000</div><div class="card-note">Talla x</div><button class="add" type="button">Añadir</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collection" id="cat-clientes">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-sub">Comunidad</div>
+        <h2>Nuestros clientes satisfechos</h2>
+        <p class="sec-text">La mejor prueba de nuestro trabajo es quien lo lleva puesto. Gracias por confiar en la visión de HATED.</p>
+      </div>
+      <div class="customer-carousel reveal">
+        <div class="carousel-container">
+          <div class="carousel-track" id="customerTrack">
+            <div class="customer-slide">
+              <div class="customer-img-wrap">
+                <video src="assets/customers/customer1.mp4" autoplay muted loop playsinline class="customer-img"></video>
+              </div>
+            </div>
+            <div class="customer-slide">
+              <div class="customer-img-wrap">
+                <video src="assets/customers/customer2.mp4" autoplay muted loop playsinline class="customer-img"></video>
+              </div>
+            </div>
+            <div class="customer-slide">
+              <div class="customer-img-wrap">
+                <video src="assets/customers/customer3.mp4" autoplay muted loop playsinline class="customer-img"></video>
+              </div>
+            </div>
+            <div class="customer-slide">
+              <div class="customer-img-wrap">
+                <video src="assets/customers/customer4.mp4" autoplay muted loop playsinline class="customer-img"></video>
+              </div>
+            </div>
+            <div class="customer-slide">
+              <div class="customer-img-wrap">
+                <video src="assets/customers/customer5.mp4" autoplay muted loop playsinline class="customer-img"></video>
+              </div>
+            </div>
+            <div class="customer-slide">
+              <div class="customer-img-wrap">
+                <video src="assets/customers/customer6.mp4" autoplay muted loop playsinline class="customer-img"></video>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-nav">
+            <button class="nav-btn prev" id="custPrev" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="nav-btn next" id="custNext" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="instagram">
+    <div class="wrap">
+      <div class="contact-info reveal">
+        <a href="https://www.instagram.com/hated.png/" class="contact-link" target="_blank" rel="noopener">
+          <svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+            <circle cx="17.5" cy="5.5" r="1.5" fill="currentColor"/>
+            <path d="M16 16c0 1.1-.9 2-2 2h-1.2c-1.1 0-2-.9-2-2v-1.2c0-1.1.9-2 2-2h1.2c1.1 0 2 .9 2 2v1.2z" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+          <span class="ig-handle">@hated.png</span>
+        </a>
+        <p class="contact-notice">Instagram es el único medio de comunicación y de pago oficial por el momento.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-about">
+        <a href="#top" class="logo" aria-label="HATED — inicio">
+          <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 4v16M4 12h10M14 4v16M20 4l-6 8 6 8"/>
+          </svg>
+          <span>HATED</span>
+        </a>
+        <p>Damos nueva vida a lo olvidado. Ropa rescatada e intervenida a mano en Pereira, Colombia.</p>
+      </div>
+      <div class="f-col">
+        <h3>Colección</h3>
+        <ul>
+          <li><a href="#coleccion">Nueva colección</a></li>
+          <li><a href="#cat-camisetas">Camisetas y camisas</a></li>
+          <li><a href="#cat-buzos">Buzos, chaquetas y blazers</a></li>
+          <li><a href="#cat-pantalones">Pantalones y jeans</a></li>
+          <li><a href="#cat-gorras">Gorras</a></li>
+          <li><a href="#cat-corbatas">Corbatas</a></li>
+          <li><a href="#cat-conjuntos">Conjuntos</a></li>
+          <li><a href="#videos">Videos</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/hated.png/" rel="noopener" target="_blank">@hated.png</a></li>
+          <li><a href="mailto:hola@hated.co">hola@hated.co</a></li>
+          <li><a href="#coleccion">Envíos a toda Colombia</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      © <span id="year"></span> HATED · Pereira, Colombia
+      <div class="f-credit">Diseño y web hecha con <span class="flame">♥</span> por <a href="https://www.instagram.com/_archetypical_/" target="_blank" rel="noopener" class="user-link-img">
+        <span>_archetypical_</span>
+      </a></div>
+    </div>
+  </div>
+</footer>
+
+<nav class="bottom-nav" aria-label="Navegación principal móvil">
+  <audio id="bgMusic" loop preload="auto">
+    <source src="./sound/better%20of%20alone.mp3" type="audio/mpeg">
+  </audio>
+  <a href="#top" class="bottom-nav-item bottom-nav-item--active">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 10l9-7 9 7v11H3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="miter"/>
+    </svg>
+    <span>Inicio</span>
+  </a>
+  <a href="#cat-camisetas" class="bottom-nav-item">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 7l4-4h8l4 4-3 2v12H7V9z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="miter"/>
+    </svg>
+    <span>Shop</span>
+  </a>
+  <a href="#coleccion" class="bottom-nav-item">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="miter"/>
+    </svg>
+    <span>Drops</span>
+  </a>
+  <button class="bottom-nav-item bottom-nav-item--cart" type="button" id="btnCartBottom">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 3h2l2.4 12.3a2 2 0 0 0 2 1.7h9.7a2 2 0 0 0 2-1.6L23 6H6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+      <circle cx="9" cy="21" r="1.4" fill="currentColor"/>
+      <circle cx="19" cy="21" r="1.4" fill="currentColor"/>
+    </svg>
+    <span>Carrito</span>
+    <span class="bottom-nav-count" id="cartCountBottom" hidden>0</span>
+  </button>
+</nav>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>

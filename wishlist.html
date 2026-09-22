@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0a0a0f" />
+<title>Tu lista de deseos — HATED</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="wishlist.css" />
+</head>
+<body>
+
+<div class="ticker" aria-label="Anuncios">
+  <div class="ticker-track">
+    <span>TUS PIEZAS FAVORITAS</span><span>·</span>
+    <span>1312</span><span>·</span>
+    <span>GUARDA LO QUE TE GUSTA</span><span>·</span>
+    <span>ACAB</span><span>·</span>
+    <span>PIEZAS ÚNICAS INTERVENIDAS A MANO</span><span>·</span>
+    <span>@HATED.PNG</span><span>·</span>
+    <span>TUS PIEZAS FAVORITAS</span><span>·</span>
+    <span>1312</span><span>·</span>
+    <span>GUARDA LO QUE TE GUSTA</span><span>·</span>
+    <span>ACAB</span><span>·</span>
+    <span>PIEZAS ÚNICAS INTERVENIDAS A MANO</span><span>·</span>
+    <span>@HATED.PNG</span><span>·</span>
+  </div>
+</div>
+
+<!-- Header idéntico al de cart.html: logo centrado + carrito a la derecha -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="HATED — inicio">
+      <span class="logo-text">HATED</span>
+      <span class="logo-sub">Creando cultura desde la resistencia.</span>
+    </a>
+    <div class="header-actions">
+      <a href="cart.html" class="icon-btn" aria-label="Ver carrito">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 3h2l2.4 12.3a2 2 0 0 0 2 1.7h9.7a2 2 0 0 0 2-1.6L23 6H6"
+                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          <circle cx="9"  cy="21" r="1.4" fill="currentColor"/>
+          <circle cx="19" cy="21" r="1.4" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="wishlist-page">
+  <div class="wrap">
+
+    <!-- BREADCRUMB ───────────────────────────────────── -->
+    <nav class="wl-breadcrumb" aria-label="Navegación de regreso">
+      <a href="index.html" class="wl-breadcrumb-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 12H5M12 19l-7-7 7-7"
+                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+        <span>Inicio</span>
+      </a>
+      <span class="wl-breadcrumb-sep" aria-hidden="true">/</span>
+      <span class="wl-breadcrumb-current" aria-current="page">Lista de deseos</span>
+    </nav>
+
+    <!-- CABECERA ──────────────────────────────────────── -->
+    <div class="wishlist-head">
+      <div class="sec-sub">Tus favoritas</div>
+      <h1>Lista de deseos</h1>
+      <p class="sec-text">Las piezas que te robaron el corazón. Guárdalas, compártelas o añádelas al carrito cuando estés lista.</p>
+    </div>
+
+    <!-- ESTADO VACÍO ─────────────────────────────────── -->
+    <div id="wishlist-empty" class="wishlist-empty" hidden>
+      <svg class="wishlist-empty-icon" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 56s-20-12-20-28a12 12 0 0 1 20-8 12 12 0 0 1 20 8c0 16-20 28-20 28z"
+              fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/>
+      </svg>
+      <p class="wishlist-empty-title">Tu lista está vacía.</p>
+      <p class="wishlist-empty-text">Explora la colección y guarda las piezas que te enamoren desde el modal de producto.</p>
+      <a href="index.html#coleccion" class="btn btn--solid">Explorar colección</a>
+    </div>
+
+    <!-- CONTENIDO CON ITEMS ──────────────────────────── -->
+    <div id="wishlist-content" class="wishlist-content" hidden>
+
+      <div class="wishlist-carousel-wrapper">
+        <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </button>
+        <div class="wishlist-carousel" id="wishlistCarousel"></div>
+        <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="carousel-indicators" id="carouselIndicators"></div>
+
+      <div class="wishlist-actions">
+        <button id="btn-share-wishlist" class="btn btn--solid" type="button">Compartir lista</button>
+        <button id="btn-clear-wishlist" class="btn" type="button">Vaciar lista</button>
+      </div>
+
+      <div class="wishlist-details" id="wishlistDetails">
+        <div class="details-header">
+          <h2 class="details-name" id="detailsName"></h2>
+          <div class="details-price" id="detailsPrice"></div>
+        </div>
+        <div class="details-info">
+          <div class="details-row">
+            <span class="details-label">Tipo</span>
+            <span class="details-value" id="detailsType"></span>
+          </div>
+          <div class="details-row">
+            <span class="details-label">Tallas</span>
+            <span class="details-value" id="detailsSizes"></span>
+          </div>
+          <div class="details-row">
+            <span class="details-label">Notas</span>
+            <span class="details-value" id="detailsNote"></span>
+          </div>
+        </div>
+        <div class="details-actions">
+          <button id="btn-add-to-cart"            class="btn btn--solid btn--full" type="button">Añadir al carrito</button>
+          <button id="btn-remove-from-wishlist"   class="btn"                     type="button">Quitar de favoritos</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="f-bottom">
+      © <span id="year"></span> HATED · Pereira, Colombia
+      <div class="f-credit">Diseño y web hecha con <span class="flame">♥</span> por <a href="https://www.instagram.com/_archetypical_/" target="_blank" rel="noopener" class="user-link-img">
+        <span>_archetypical_</span>
+      </a></div>
+    </div>
+  </div>
+</footer>
+
+<div id="wishlist-toast" class="wishlist-toast" aria-live="polite"></div>
+
+<script src="wishlist.js" defer></script>
+</body>
+</html>

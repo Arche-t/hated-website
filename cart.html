@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0a0a0f" />
+<title>Tu carrito — HATED</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+<!-- TICKER (sin emojis) -->
+<div class="ticker" aria-label="Anuncios">
+  <div class="ticker-track">
+    <span>COORDINA TU PEDIDO POR DM</span><span>·</span>
+    <span>1312</span><span>·</span>
+    <span>ENVIOS A TODA COLOMBIA</span><span>·</span>
+    <span>ACAB</span><span>·</span>
+    <span>PIEZAS UNICAS INTERVENIDAS A MANO</span><span>·</span>
+    <span>@HATED.PNG</span><span>·</span>
+    <span>COORDINA TU PEDIDO POR DM</span><span>·</span>
+    <span>1312</span><span>·</span>
+    <span>ENVIOS A TODA COLOMBIA</span><span>·</span>
+    <span>ACAB</span><span>·</span>
+    <span>PIEZAS UNICAS INTERVENIDAS A MANO</span><span>·</span>
+    <span>@HATED.PNG</span><span>·</span>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="HATED — inicio">
+      <span class="logo-text">HATED</span>
+      <span class="logo-sub">Creando cultura desde la resistencia.</span>
+    </a>
+    <div class="header-actions">
+      <a href="cart.html" class="icon-btn" aria-label="Ver carrito">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 3h2l2.4 12.3a2 2 0 0 0 2 1.7h9.7a2 2 0 0 0 2-1.6L23 6H6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          <circle cx="9" cy="21" r="1.4" fill="currentColor"/>
+          <circle cx="19" cy="21" r="1.4" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="cart-page">
+  <div class="wrap">
+
+    <!-- PASO 1 -->
+    <section id="step-1" class="cart-step">
+      <div class="cart-head">
+        <div class="sec-sub">Paso 1 de 2</div>
+        <h1>Tu selección</h1>
+        <p class="sec-text">Revisa tus piezas y elige cómo quieres recibirlas.</p>
+      </div>
+
+      <div id="cart-items" class="cart-items"></div>
+
+      <div id="cart-empty" class="cart-empty" hidden>
+        <svg class="cart-empty-icon" viewBox="0 0 64 64" aria-hidden="true" style="width:100px;height:100px;margin:0 auto 20px">
+          <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="square">
+            <path d="M6 10h8l4.8 26a4 4 0 0 0 4 3.4h22.4a4 4 0 0 0 4-3.2L54 18H16"/>
+            <circle cx="25" cy="50" r="3.2"/>
+            <circle cx="47" cy="50" r="3.2"/>
+          </g>
+        </svg>
+        <p style="font-family:var(--f-display);font-size:1.1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin-bottom:8px">Tu carrito está vacío.</p>
+        <p style="font-size:.86rem;color:var(--dim);margin-bottom:24px">Las piezas únicas vuelan rápido.</p>
+        <a href="index.html#coleccion" class="btn btn--solid">Ver drop activo</a>
+      </div>
+
+      <div id="cart-delivery" class="cart-delivery" hidden>
+        <h3 class="delivery-title">Metodo de entrega</h3>
+        <div class="delivery-options">
+          <label class="delivery-option">
+            <input type="radio" name="delivery" value="pickup" checked>
+            <div class="delivery-option-content">
+              <div class="delivery-option-name">Entrega personal</div>
+              <div class="delivery-option-desc">Pereira · Sin costo adicional</div>
+            </div>
+            <div class="delivery-option-price">$0</div>
+          </label>
+          <label class="delivery-option">
+            <input type="radio" name="delivery" value="shipping">
+            <div class="delivery-option-content">
+              <div class="delivery-option-name">Envio nacional</div>
+              <div class="delivery-option-desc">A toda Colombia · 3-5 dias habiles</div>
+            </div>
+            <div class="delivery-option-price">$18.000</div>
+          </label>
+        </div>
+      </div>
+
+      <div id="cart-summary" class="cart-summary" hidden>
+        <div class="cart-total-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0</span>
+        </div>
+        <div class="cart-total-row" id="shipping-row" hidden>
+          <span>Envio</span>
+          <span id="cart-shipping">$18.000</span>
+        </div>
+        <div class="cart-total-row cart-total-final">
+          <span>Total</span>
+          <span id="cart-total">$0</span>
+        </div>
+      </div>
+
+      <div id="cart-actions-1" class="cart-actions" hidden>
+        <a href="index.html" class="btn">Seguir comprando</a>
+        <button id="btn-next" class="btn btn--solid btn--full" type="button">Paso siguiente</button>
+      </div>
+    </section>
+
+    <!-- PASO 2 -->
+    <section id="step-2" class="cart-step" hidden>
+      <div class="cart-head">
+        <div class="sec-sub">Paso 2 de 2</div>
+        <h1>Confirma tu pedido</h1>
+        <p class="sec-text">Captura la imagen y envíala al chat de Instagram.</p>
+      </div>
+
+      <div id="cart-capture" class="cart-capture">
+        <div class="capture-header">
+          <span class="capture-brand">HATED</span>
+          <span class="capture-tagline">Creando cultura desde la resistencia.</span>
+        </div>
+
+        <div id="capture-items" class="capture-items"></div>
+
+        <div class="capture-summary">
+          <div class="capture-row">
+            <span>Subtotal</span>
+            <span id="capture-subtotal">$0</span>
+          </div>
+          <div class="capture-row" id="capture-shipping-row">
+            <span>Envio</span>
+            <span id="capture-shipping">$0</span>
+          </div>
+          <div class="capture-row capture-total">
+            <span>Total</span>
+            <span id="capture-total">$0</span>
+          </div>
+          <div class="capture-delivery">
+            <span class="capture-label">Entrega:</span>
+            <span id="capture-delivery-method">Entrega personal</span>
+          </div>
+        </div>
+
+        <div class="capture-footer">
+          <div class="capture-contact">@hated.png</div>
+          <div class="capture-note">Coordina pago y detalles por DM</div>
+        </div>
+      </div>
+
+      <div id="cart-preview" class="cart-preview" hidden>
+        <p class="preview-label">Vista previa de la captura:</p>
+        <img id="preview-img" alt="Captura de tu pedido">
+      </div>
+
+      <div class="cart-actions">
+        <button id="btn-back" class="btn" type="button">Volver</button>
+        <button id="btn-share" class="btn btn--solid btn--full" type="button">Compartir en Instagram</button>
+      </div>
+
+      <div id="post-share" class="post-share" hidden>
+        <div class="post-share-icon">✓</div>
+        <h2 class="post-share-title">¡Pedido enviado!</h2>
+        <p class="post-share-text">Coordina los detalles finales con @hated.png por DM.</p>
+        <div class="post-share-buttons">
+          <a href="index.html" class="btn btn--solid btn--full">Volver al inicio</a>
+          <button id="btn-new-order" class="btn" type="button">Hacer otro pedido</button>
+        </div>
+      </div>
+
+      <div class="cart-instructions">
+        <p class="instructions-title">¿Cómo funciona?</p>
+        <ol class="instructions-list">
+          <li>Haz clic en "Compartir en Instagram"</li>
+          <li>Selecciona Instagram de la lista de apps</li>
+          <li>Elige el chat de <strong>@hated.png</strong></li>
+          <li>Envía la imagen con el texto del pedido</li>
+        </ol>
+        <p class="instructions-note">Si tu dispositivo no permite compartir directo, descarga la imagen y envíala manualmente.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="f-bottom">
+      © <span id="year"></span> HATED · Pereira, Colombia
+      <div class="f-credit">Diseño y web hecha con <span class="flame">♥</span> por <a href="https://www.instagram.com/_archetypical_/" target="_blank" rel="noopener" class="user-link-img">
+        <span>_archetypical_</span>
+      </a></div>
+    </div>
+  </div>
+</footer>
+
+<div id="cart-toast" class="cart-toast" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="cart.js" defer></script>
+</body>
+</html>
